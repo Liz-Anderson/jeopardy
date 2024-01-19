@@ -34,12 +34,14 @@ const vm = new Vue({
         doubleJeopardyCategories: [],
         round: 0,
         count: 0,
+        loading: false,
         
     },
     methods: {
         getJeopardy: function() {
             let x = this.gameDate.split('-')
             x = `${x[1]}/${x[2]}/${x[0]}`
+            this.loading = !this.loading
             console.log(x)
             axios({
                 method: 'get',
@@ -51,6 +53,7 @@ const vm = new Vue({
                 this.round = 1
                 this.count = 0
                 this.clicks = 0
+                this.loading = !this.loading
             })
         },
         categoryMaker: function() {

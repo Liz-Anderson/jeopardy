@@ -37,6 +37,19 @@
             <!-- </div> -->
                
 
+<!-- ------------------------ loading ----------------------------- -->
+            <div v-show="loading">
+                <!-- v-show="loading" -->
+                <div class="loading-div">
+                    <p class="loading">?</p>
+                </div>
+                
+                <p class="load">Loading</p>
+            </div>
+
+            
+
+
 <!----------------------- jeopardy --------------------------->
 
             <div class="game-container" v-if="round === 1">

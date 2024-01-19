@@ -37,6 +37,49 @@ button {
     text-align: center;
 }
 
+.loading-div {
+    /* border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(4, 3, 51);  */
+    background-color: rgb(4, 4, 182);
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    animation: spin 2s linear infinite;
+
+}
+
+.loading {
+    font-family: 'Gyparody', 'Helvetica', sans-serif;
+    color: rgb(241, 218, 2);
+    text-align: center;
+    /* vertical-align: middle; */
+    font-size: 100px;
+    /* border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(4, 3, 51); 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    /* animation: spin 2s linear infinite; */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .load {
+      text-align: center;
+  }
+
 .under-text {
     padding-left: 6em;
 }
