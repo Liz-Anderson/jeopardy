@@ -38,7 +38,7 @@
                
 
 <!-- ------------------------ loading ----------------------------- -->
-            <div v-show="loading">
+            <div v-show="loading && !game.message">
                 <!-- v-show="loading" -->
                 <div class="loading-div">
                     <p class="loading">?</p>
@@ -66,7 +66,7 @@
 
                         <clue-object
                             v-for="item in game['jeopardy']"
-                            :key = "game['jeopardy'].order"
+                            :key = "item.order"
                             :item = item
                             :category = category
                         ></clue-object>
@@ -96,7 +96,7 @@
 
                         <clue-object
                             v-for="item in game['double jeopardy']"
-                            :key = "game['double jeopardy'].order + 30"
+                            :key = "item.order + 30"
                             :item = item
                             :category = category
                             ></clue-object>

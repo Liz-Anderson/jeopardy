@@ -39,6 +39,10 @@ const vm = new Vue({
     },
     methods: {
         getJeopardy: function() {
+            this.round = 0
+            this.game = {}
+            this.loading = false
+       
             let x = this.gameDate.split('-')
             x = `${x[1]}/${x[2]}/${x[0]}`
             this.loading = !this.loading
@@ -59,6 +63,7 @@ const vm = new Vue({
         categoryMaker: function() {
             let jeopardyCategories = []
             let doubleJeopardyCategories = []
+            
             for (item of this.game.jeopardy) {
                 if (!jeopardyCategories.includes(item.category)) {
                     jeopardyCategories.push(item.category)
